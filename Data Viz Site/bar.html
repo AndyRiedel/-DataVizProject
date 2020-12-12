@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="Project.js"></script>
+    <link rel="stylesheet" type="text/css" href="Visualizer Stylesheet.css">
+    <title>Visualization Project</title>
+</head>
+<body>
+    <div id="mainGrid">
+    <header>
+        <h1>Bar Chart</h1>
+
+    </header>
+    <nav class="headernav">
+        <ul class="ulNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="venn.html">Venn</a></li>
+            <li><a href="bar.html">Bar Chart</a></li>
+            <li><a href="comments.html">Comments</a><li>
+        </ul>
+
+        <div class="burger">
+            
+            <div id="burgerMenu">
+                <a href="index.html">Home</a>
+                <a href="venn.html">Venn</a>
+                <a href="bar.html">Bar Chart</a>
+                <a href="comments.html">Comments</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div class="tabs">
+            <!--https://getbootstrap.com/docs/4.0/components/navs/
+                These tabs were created based of templates in bootstrap documentation-->
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-data-tab" data-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-home" aria-selected="true">Data</a>
+              <a class="nav-item nav-link" id="nav-settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-profile" aria-selected="false">Settings</a>
+              <a class="nav-item nav-link" id="nav-viz-tab" data-toggle="tab" href="#nav-viz" role="tab" aria-controls="nav-contact" aria-selected="false" onclick="drawBar()">Visual</a>
+            </div>
+        
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
+                <h3>Enter Your Data</h3>
+                <p>Enter labels and values below, delimited by commas (e.g. "A, B, C" labels for "1, 2, 3" values). The number of entered labels must equal the number of entered values for the chart to draw.</p>
+                <p>To upload a file, select a comma-seperated values file (.csv) from your computer. An example is provided in the site directory.</p>
+                <ul>
+                    <li>The first row will be assumed to be header information, and will be excluded.</li>
+                    <li>Align your x-values in the first column</li>
+                    <li>Align your corresponding y-values in the second column</li>
+                    <li>The program will sort this data by string or number in the x-axis column (column 1)</li>
+                </ul>
+                <br>
+                <h2>Upload</h2>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="dataInput">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="dataInput" onchange="fileSelectTrigger(false)">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div>    
+                <!-- end bootstrap tabs template-->
+                <form>
+                    <label for="xAxis">X Axis Labels (comma delimited)</label>
+                    <input type="text" id="xAxis" name="xAxis"><br>
+                    <label for="yAxis">Y Axis Values (comma delimited)</label>
+                    <input type="text" id="yAxis" name="yAxis"><br>
+                </form>
+            </div>
+            
+
+
+            <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
+                <h3>Visualization Settings</h3>
+                <p style = "float:left;">Select the desired color for your bar chart.</p>
+                <br>
+                <form>
+                    <label for="barColor">Bar Color</label>
+                    <input type="color" id="barColor" name="barColor" value = "#000000"><br>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="nav-viz" role="tabpanel" aria-labelledby="nav-viz-tab">
+                <h3>Output Visualization</h3>
+                <p>See below a chart of your x and y values.</p>
+                <object id="bar" data="bar.svg"></object>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact <a href="mailto:cariedel5@mail.fhsu.edu">cariedel5@mail.fhsu.edu</a> for more information.</p>
+    </footer>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function() {
+            var obj = document.getElementById('bar');
+            obj.addEventListener('load', function(){
+                drawBar();
+            });
+        });
+    </script>
+</body>
+
+</html>

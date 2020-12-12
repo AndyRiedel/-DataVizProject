@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--SOURCE: Commenting system sourced from this tutorial -> https://www.webslesson.info/2017/12/comments-system-using-php-and-ajax.html-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="Project.js"></script>
+    <link rel="stylesheet" type="text/css" href="Visualizer Stylesheet.css">
+    <title>Visualization Project</title>
+</head>
+<body id="comment">
+    <div id="mainGrid">
+    <header>
+        <h1>Comments</h1>
+
+    </header>
+    <nav class="headernav">
+        <ul class="ulNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="venn.html">Venn</a></li>
+            <li><a href="bar.html">Bar Chart</a></li>
+            <li><a href="comments.html">Comments</a></li>
+        </ul>
+
+        <div class="burger">
+            
+            <div id="burgerMenu">
+                <a href="index.html">Home</a>
+                <a href="venn.html">Venn</a>
+                <a href="bar.html">Bar Chart</a>
+                <a href="comments.html">Comments</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+    <main>
+    
+        <section id="comments" class="body">
+			<?php
+			//index.php
+
+			?>
+			<!DOCTYPE html>
+			<html>
+			 <head>
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+			  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+			  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+			 </head>
+			 <body>
+			  <div class="comment_container">
+			   <form method="POST" id="comment_form">
+				<div class="form-group">
+				 <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
+				</div>
+				<div class="form-group">
+				 <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
+				</div>
+				<div class="form-group">
+				 <input type="hidden" name="comment_id" id="comment_id" value="0" />
+				 <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
+				</div>
+			   </form>
+			   <span id="comment_message"></span>
+			   <br />
+			   <div id="display_comment"></div>
+			  </div>
+			 </body>
+			</html>
+
+			<script>
+			$(document).ready(function(){
+			 
+			 $('#comment_form').on('submit', function(event){
+			  event.preventDefault();
+			  var form_data = $(this).serialize();
+			  $.ajax({
+			   url:"add_comment.php",
+			   method:"POST",
+			   data:form_data,
+			   dataType:"JSON",
+			   success:function(data)
+			   {
+				if(data.error != '')
+				{
+				 $('#comment_form')[0].reset();
+				 $('#comment_message').html(data.error);
+				 $('#comment_id').val('0');
+				 load_comment();
+				}
+			   }
+			  })
+			 });
+
+			 load_comment();
+
+			 function load_comment()
+			 {
+			  $.ajax({
+			   url:"fetch_comment.php",
+			   method:"POST",
+			   success:function(data)
+			   {
+				$('#display_comment').html(data);
+			   }
+			  })
+			 }
+
+			 $(document).on('click', '.reply', function(){
+			  var comment_id = $(this).attr("id");
+			  $('#comment_id').val(comment_id);
+			  $('#comment_name').focus();
+			 });
+			 
+			});
+			</script>
+                  
+          </section>
+
+
+    </main>
+    <footer>
+        <p>Contact <a href="mailto:cariedel5@mail.fhsu.edu">cariedel5@mail.fhsu.edu</a> for more information.</p>
+    </footer>
+    </div>
+</body>
+
+</html>
