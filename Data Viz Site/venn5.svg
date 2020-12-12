@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--source: https://en.wikipedia.org/wiki/File:Symmetrical_5-set_Venn_diagram.svg, used with permission under creative commons license -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600px" height="600px" viewBox="-1790 -1900 3648 3648">
+    <title>Symmetrical 5-set Venn diagram</title>
+    <desc>Radially symmetrical five-set Venn diagram originally devised by Branko Gruenbaum and optimised for maximum area of the smallest regions and rendered by CMG Lee.</desc>
+    <defs>
+        <ellipse id="set" cx="120" cy="-275" rx="1000" ry="1587"/>
+        <g id="sets">
+            <use xlink:href="#set" fill="#6600ff" id="setA"/>
+            <use xlink:href="#set" fill="#0099ff" id="setB" transform="rotate( 72)"/>
+            <use xlink:href="#set" fill="#00cc00" id="setC" transform="rotate(144)"/>
+            <use xlink:href="#set" fill="#cc9900" id="setD" transform="rotate(216)"/>
+            <use xlink:href="#set" fill="#ff0000" id="setE" transform="rotate(288)"/>
+        </g>
+    </defs>
+    <circle cx="0" cy="0" r="99999" fill="#ffffff"/>
+    <g font-family="Helvetica,Arial,sans-serif" text-anchor="middle" stroke="none">
+        <use xlink:href="#sets" fill-opacity="0.3"/>
+        <use xlink:href="#sets" fill-opacity="0" opacity="0.5" stroke="#000000" stroke-width="6"/>
+        <g font-size="240">
+            <text id="setABCDEValue" transform="translate(    0,    0) scale(0.9,1)" x="0" y="0.7ex">ABCDE</text>
+            <text id="setAValue" transform="translate(  120,-1590) scale(0.9,1)" x="0" y="0.7ex">A</text>
+            <text id="setBValue" transform="translate( 1500, -360) scale(0.9,1)" x="0" y="0.7ex">B</text>
+            <text id="setCValue" transform="translate(  780, 1320) scale(0.9,1)" x="0" y="0.7ex">C</text>
+            <text id="setDValue" transform="translate(-1080, 1140) scale(0.9,1)" x="0" y="0.7ex">D</text>
+            <text id="setEValue" transform="translate(-1440, -600) scale(0.9,1)" x="0" y="0.7ex">E</text>
+        </g>
+        <g font-size="120" font-weight="bold">
+            <text id="setABValue" transform="translate(  980, -840) scale(0.9,1)" x="0" y="0.7ex">AB</text>
+            <text id="setACValue" transform="translate(  330, 1170) scale(0.9,1)" x="0" y="0.7ex">AC</text>
+            <text id="setADValue" transform="translate(  420,-1140) scale(0.9,1)" x="0" y="0.7ex">AD</text>
+            <text id="setAEValue" transform="translate( -480,-1190) scale(0.9,1)" x="0" y="0.7ex">AE</text>
+            <text id="setBCValue" transform="translate( 1120,  660) scale(0.9,1)" x="0" y="0.7ex">BC</text>
+            <text id="setBDValue" transform="translate(-1010,  660) scale(0.9,1)" x="0" y="0.7ex">BD</text>
+            <text id="setBEValue" transform="translate( 1210,   30) scale(0.9,1)" x="0" y="0.7ex">BE</text>
+            <text id="setCDValue" transform="translate( -330, 1230) scale(0.9,1)" x="0" y="0.7ex">CD</text>
+            <text id="setCEValue" transform="translate( -970, -720) scale(0.9,1)" x="0" y="0.7ex">CE</text>
+            <text id="setDEValue" transform="translate(-1300,  150) scale(0.9,1)" x="0" y="0.7ex">DE</text>
+            <text id="setABCValue" transform="translate(  600,  900) scale(0.9,1)" x="0" y="0.7ex">ABC</text>
+            <text id="setABDValue" transform="translate(  690, -960) scale(0.9,1)" x="0" y="0.7ex">ABD</text>
+            <text id="setABEValue" transform="translate( 1040, -210) scale(0.7,1)" x="0" y="0.7ex">ABE</text>
+            <text id="setACDValue" transform="translate(  -60, 1180) scale(0.9,1)" x="0" y="0.7ex">ACD</text>
+            <text id="setACEValue" transform="translate( -660,-1010) scale(0.8,1)" x="0" y="0.7ex">ACE</text>
+            <text id="setADEValue" transform="translate(   60,-1080) scale(0.9,1)" x="0" y="0.7ex">ADE</text>
+            <text id="setBCDValue" transform="translate( -730,  750) scale(0.7,1)" x="0" y="0.7ex">BCD</text>
+            <text id="setBCEValue" transform="translate( 1120,  400) scale(0.8,1)" x="0" y="0.7ex">BCE</text>
+            <text id="setBDEValue" transform="translate(-1140,  350) scale(0.8,1)" x="0" y="0.7ex">BDE</text>
+            <text id="setCDEValue" transform="translate( -960, -440) scale(0.7,1)" x="0" y="0.7ex">CDE</text>
+            <text id="setABCDValue" transform="translate(  -60,  960) scale(0.9,1)" x="0" y="0.7ex">ABCD</text>
+            <text id="setABCEValue" transform="translate(  822,  540) scale(0.8,1)" x="0" y="0.7ex">ABCE</text>
+            <text id="setABDEValue" transform="translate(  740, -660) scale(0.9,1)" x="0" y="0.7ex">ABDE</text>
+            <text id="setACDEValue" transform="translate( -510, -840) scale(0.9,1)" x="0" y="0.7ex">ACDE</text>
+            <text id="setBCDEValue" transform="translate(-1000,  -30) scale(0.8,1)" x="0" y="0.7ex">BCDE</text>
+        </g>
+    </g>
+</svg>

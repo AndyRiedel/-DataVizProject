@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" viewBox="0 0 400 400" preserveAspectRatio="xMidYMin meet">
+ <title>Venn 2</title>
+
+    <circle id="setA" r="100" cx="150" cy="200" fill="green" stroke="black" stroke-width="2" fill-opacity=".4"/>
+    <circle id="setB" r="100" cx="250" cy="200" fill="blue" stroke="black" stroke-width="2" fill-opacity=".4"/>
+
+  <g font-size="12" font-family="Helvetica,Arial,sans-serif" text-anchor="middle" stroke="none">
+    <text id="setAValue" transform="translate(    125,    200) scale(0.9,1)" x="0" y="0.7ex">Set A</text>
+    <text id="setBValue" transform="translate(    275,    200) scale(0.9,1)" x="0" y="0.7ex">Set B</text>
+    <text id="setABValue" transform="translate(    200,    200) scale(0.9,1)" x="0" y="0.7ex">Set AB</text>
+  </g>
+
+</svg>

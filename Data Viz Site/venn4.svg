@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+        xml:lang="en" viewBox="0 0 600 600" width="600px" height="600px">
+ <title>Some Drawing</title>
+
+    <ellipse id="setA" cx="-50" cy = "350" rx = "100" ry = "250" fill="cyan" stroke="black" 
+               stroke-width="1" fill-opacity=".2" transform="rotate(-45)" />
+    <ellipse id="setB" cx="55" cy = "350" rx = "100" ry = "250" fill="red" stroke="black" 
+               stroke-width="1" fill-opacity=".2" transform="rotate(-45)" />
+    
+    <ellipse id="setC" cx="375" cy = "-75" rx = "100" ry = "250" fill="blue" stroke="black" 
+               stroke-width="1" fill-opacity=".2" transform="rotate(45)"/>
+    <ellipse id="setD" cx="475" cy = "-75" rx = "100" ry = "250" fill="green" stroke="black" 
+               stroke-width="1" fill-opacity=".2" transform="rotate(45)"/>
+
+
+  <g font-size="12" font-family="Helvetica,Arial,sans-serif" text-anchor="middle" stroke="none">
+    <text id="setAValue" transform="translate(    100,    200) scale(0.9,1)" x="0" y="0.7ex">Set A</text>
+    <text id="setBValue" transform="translate(    200,    85) scale(0.9,1)" x="0" y="0.7ex">Set B</text>
+    <text id="setABValue" transform="translate(    175,    175) scale(0.9,1)" x="0" y="0.7ex">Set AB</text>
+    <text id="setCValue" transform="translate(    400, 85) scale(0.9,1)" x="0" y="0.7ex">Set C</text>
+    <text id="setACValue" transform="translate(    185,    315) scale(0.9,1)" x="0" y="0.7ex">Set AC</text>
+    <text id="setBCValue" transform="translate(    300,    160) scale(0.9,1)" x="0" y="0.7ex">Set BC</text>
+    <text id="setABCValue" transform="translate(    235,    235) scale(0.9,1)" x="0" y="0.7ex">Set ABC</text>
+    <text id="setDValue" transform="translate(    525,    175) scale(0.9,1)" x="0" y="0.7ex">Set D</text>
+    <text id="setADValue" transform="translate(    300,    400) scale(0.9,1)" x="0" y="0.7ex">Set AD</text>
+    <text id="setBDValue" transform="translate(    425,    315) scale(0.9,1)" x="0" y="0.7ex">Set BD</text>
+    <text id="setABDValue" transform="translate(    355,    355) scale(0.9,1)" x="0" y="0.7ex">Set ABD</text>
+    <text id="setCDValue" transform="translate(    435,    165) scale(0.9,1)" x="0" y="0.7ex">Set CD</text>
+    <text id="setACDValue" transform="translate(    250,    350) scale(0.9,1)" x="0" y="0.7ex">Set ACD</text>
+    <text id="setBCDValue" transform="translate(    365,    235) scale(0.9,1)" x="0" y="0.7ex">Set BCD</text>
+    <text id="setABCDValue" transform="translate(    300,    300) scale(0.9,1)" x="0" y="0.7ex">Set ABCD</text>
+  </g>
+
+
+</svg>

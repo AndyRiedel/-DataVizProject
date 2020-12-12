@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" viewBox="0 0 400 400" width="400px" height="400px">
+ <title>Some Drawing</title>
+
+    <circle id = "setA" r="100" cx="150" cy="150" fill="green" stroke="black" stroke-width="2" fill-opacity=".4"/>
+    <circle id = "setB" r="100" cx="250" cy="150" fill="blue" stroke="black" stroke-width="2" fill-opacity=".4"/>
+    <circle id = "setC" r="100" cx="200" cy="250" fill="orange" stroke="black" stroke-width="2" fill-opacity=".4"/>
+
+     
+  <g font-size="12" font-family="Helvetica,Arial,sans-serif" text-anchor="middle" stroke="none">
+    <text id="setAValue" transform="translate(    100,    150) scale(0.9,1)" x="0" y="0.7ex">Set A</text>
+    <text id="setBValue" transform="translate(    300,    150) scale(0.9,1)" x="0" y="0.7ex">Set B</text>
+    <text id="setABValue" transform="translate(    200,    120) scale(0.9,1)" x="0" y="0.7ex">Set AB</text>
+    <text id="setCValue" transform="translate(    200,    300) scale(0.9,1)" x="0" y="0.7ex">Set C</text>
+    <text id="setBCValue" transform="translate(    255,    220) scale(0.9,1)" x="0" y="0.7ex">Set BC</text>
+    <text id="setACValue" transform="translate(    145,    220) scale(0.9,1)" x="0" y="0.7ex">Set AC</text>
+    <text id="setABCValue" transform="translate(    200,    187.5) scale(0.9,1)" x="0" y="0.7ex">Set ABC</text>
+
+  </g>
+
+
+</svg>
